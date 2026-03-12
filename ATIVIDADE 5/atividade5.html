@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Curiosidades e fatos históricos da Ciência da Computação">
+    <meta name="author" content="Portal Computação">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <title>Arquivo Confuso da Computação</title>
+</head>
+
+<body>
+
+<div id="pagina">
+
+    <header id="topo">
+        <h1>Arquivo (Quase) Perdido da Ciência da Computação</h1>
+        <p>Uma coletânea caótica de fatos históricos, curiosos e inesperados.</p>
+    </header>
+
+    <nav id="menu-principal" class="navbar" style="background-color: #e3f2fd; justify-content: center;" data-bs-theme="light">
+        
+            <a class="btn btn-outline-primary" style="margin: 10px;"href="#pioneiros">Pioneiros</a>
+            <a class="btn btn-outline-primary"style="margin: 10px;"href="#bugs">Bugs</a></li>
+            <a class="btn btn-outline-primary"style="margin: 10px;"href="#internet">Internet</a>
+            <a class="btn btn-outline-primary"style="margin: 10px;"href="#linguagens">Linguagens</a>
+            <a class="btn btn-outline-primary"style="margin: 10px;"href="#linha-do-tempo">Linha do Tempo</a>
+            <a class="btn btn-outline-primary"style="margin: 10px;"href="#formulario">Envie Algo</a>
+    
+    </nav>
+
+    <main>
+
+        <section id="pioneiros">
+            <h2>Pioneiros Esquecidos</h2>
+
+            <div class="card" style="width: 20%;">
+                <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+            <article class="card-body" style="background-color: white;">
+                <h3 class="card-title">Ada Lovelace</h3>
+                <p class="card-text">Considerada a primeira programadora da história.</p>
+                <details>
+                    <summary>Ver mais</summary>
+                    <p>Ela escreveu um algoritmo para a Máquina Analítica no século XIX.</p>
+                </details>
+            </article>
+            </div>
+            <div class="card" style="width: 20%;">
+               <img src="data:image/jpeg;base64,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" class="card-img-top" alt="..."> 
+            <article class="card-body" style="background-color: white;">
+                <h3 class="card-title">Alan Turing</h3>
+                <p class="card-text">Criador do conceito de Máquina de Turing.</p>
+                <blockquote class="alert alert-primary" role="alert">
+                    "Podemos ver apenas um pouco do futuro, mas o suficiente para perceber que há muito a fazer."
+                </blockquote>
+            </article>
+            </div>
+
+            <aside>
+                <h4>Curiosidade lateral</h4>
+                <p>Durante décadas, o trabalho de Turing foi mantido em segredo.</p>
+            </aside>
+        </section>
+
+        <section id="bugs">
+            <h2>Histórias de Bugs</h2>
+
+            <article>
+                <h3>O Primeiro Bug Real</h3>
+                <p>Uma mariposa encontrada em um computador em 1947.</p>
+                <figure>
+                    <figcaption>Registro do bug colado no relatório técnico.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3>O Vírus Creeper</h3>
+                <p>Primeiro vírus da história (1971).</p>
+                <p>Mensagem exibida:</p>
+                <pre>
+I'M THE CREEPER : CATCH ME IF YOU CAN
+                </pre>
+            </article>
+        </section>
+
+        <section id="internet">
+            <h2>Curiosidades da Internet</h2>
+
+            <article>
+                <h3>Primeiro Website</h3>
+                <p>Criado em 1991 por Tim Berners-Lee.</p>
+            </article>
+
+            <article>
+                <h3>ARPANET</h3>
+                <p>A precursora da internet moderna.</p>
+                <ul>
+                    <li>Primeira mensagem enviada: "LO"</li>
+                    <li>O sistema caiu antes de completar "LOGIN"</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Emojis e ASCII</h3>
+                <p>Antes dos emojis gráficos, usávamos:</p>
+                <code>:-)</code>
+                <code>;-)</code>
+                <code>:-D</code>
+            </article>
+        </section>
+
+        <section id="linguagens">
+            <h2>Linguagens de Programação</h2>
+
+            <article>
+                <h3>COBOL</h3>
+                <p>Ainda usado em sistemas bancários.</p>
+            </article>
+
+            <article>
+                <h3>C</h3>
+                <p>Base para muitos sistemas operacionais.</p>
+            </article>
+
+            <article>
+                <h3>HTML</h3>
+                <p>Não é linguagem de programação, mas estrutura a web.</p>
+            </article>
+
+            <div>
+                <table class="table" style="width: 50%;">
+                    <caption>Linguagens e Ano de Criação</caption>
+                    <thead>
+                        <tr>
+                            <th>Linguagem</th>
+                            <th>Ano</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>COBOL</td>
+                            <td>1959</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>1972</td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>1991</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Dados históricos aproximados</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section id="linha-do-tempo">
+            <h2>Linha do Tempo Aleatória</h2>
+
+            <ol>
+                <li>1837 - Máquina Analítica</li>
+                <li>1946 - ENIAC</li>
+                <li>1969 - ARPANET</li>
+                <li>1991 - Primeiro site</li>
+                <li>2007 - Popularização dos smartphones</li>
+            </ol>
+        </section>
+
+
+</div>
+
+
+<header>
+    <h1>Fatos Inúteis (Mas Incríveis) da Ciência da Computação</h1>
+    <p>Informações que não vão melhorar seu código… mas vão melhorar sua aula.</p>
+</header>
+
+<nav class="navbar" style="background-color: #e3f2fd; justify-content: center;" data-bs-theme="light">
+    
+        <a class="btn btn-outline-primary" style="margin: 10px;" href="#nomes">Nomes Estranhos</a>
+        <a class="btn btn-outline-primary" style="margin: 10px;" href="#acidentes">Acidentes Tecnológicos</a>
+        <a class="btn btn-outline-primary" style="margin: 10px;" href="#dinheiro">Erros Caríssimos</a>
+        <a class="btn btn-outline-primary" style="margin: 10px;" href="#aleatorio">Aleatoriedades</a>
+        <a class="btn btn-outline-primary" style="margin: 10px;" href="#form">Envie Algo Inútil</a>
+    
+</nav>
+
+
+
+<section id="nomes">
+    <h2>Nomes Estranhos da Computação</h2>
+
+    <article>
+        <h3>Spam vem de um presunto</h3>
+        <p>
+            O termo "spam" para emails indesejados vem de um esquete do 
+            <strong>Monty Python</strong> onde a palavra SPAM (marca de presunto enlatado) 
+            era repetida incessantemente.
+        </p>
+    </article>
+
+    <article>
+        <h3>Bluetooth tem nome viking</h3>
+        <p>
+            A tecnologia foi nomeada em homenagem ao rei 
+            <em>Harald "Bluetooth" Gormsson</em>, que unificou a Dinamarca.
+            A ideia era “unificar dispositivos”.
+        </p>
+    </article>
+
+    <article>
+        <h3>Bug é literalmente bug</h3>
+        <p>
+            O famoso inseto encontrado no computador 
+            <abbr title="Harvard Mark II">Mark II</abbr> em 1947 
+            era uma mariposa de verdade.
+        </p>
+        <details>
+            <summary>Detalhe inútil</summary>
+            <p>O inseto ainda está preservado em um museu.</p>
+        </details>
+    </article>
+
+</section>
+
+
+<section id="acidentes">
+
+    <h2>Acidentes Tecnológicos Surpreendentes</h2>
+
+    <article>
+        <h3>O primeiro domínio registrado</h3>
+        <p>
+            O primeiro domínio da história foi 
+            <code>symbolics.com</code> registrado em 1985.
+        </p>
+    </article>
+
+    <article>
+        <h3>O erro que quase causou guerra nuclear</h3>
+        <p>
+            Em 1983, um sistema soviético detectou falsamente mísseis americanos.
+            O oficial Stanislav Petrov decidiu ignorar o alerta.
+        </p>
+        <blockquote>
+            Um bug pode ter salvo o mundo.
+        </blockquote>
+    </article>
+
+    <article>
+        <h3>O computador que pesava 27 toneladas</h3>
+        <p>
+            O ENIAC ocupava 167 m² e consumia energia suficiente para escurecer parte da cidade.
+        </p>
+    </article>
+
+</section>
+
+
+<section id="dinheiro">
+
+    <h2>Erros Caríssimos</h2>
+
+    <article>
+        <h3>O traço que custou milhões</h3>
+        <p>
+            Em 1962, a NASA perdeu a sonda Mariner 1 por causa de um erro em uma fórmula matemática:
+            faltava um simples hífen.
+        </p>
+    </article>
+
+    <article>
+        <h3>Bitcoin jogado no lixo</h3>
+        <p>
+            Um homem no Reino Unido descartou um HD com 8.000 bitcoins.
+        </p>
+        <pre>
+Valor atual: melhor não calcular.
+        </pre>
+    </article>
+
+</section>
+
+
+<section id="aleatorio">
+
+    <h2>Coisas Aleatórias que Você Não Pediu</h2>
+
+    <article>
+        <h3>O primeiro emoticon</h3>
+        <p>
+            :-) foi sugerido em 1982 por Scott Fahlman.
+        </p>
+    </article>
+
+    <article>
+        <h3>A senha mais usada do mundo</h3>
+        <p><strong>123456</strong></p>
+    </article>
+
+    <article>
+        <h3>O Google já quebrou a internet</h3>
+        <p>
+            Em 2009, o Google marcou acidentalmente todos os sites como maliciosos por 40 minutos.
+        </p>
+    </article>
+
+    <article>
+        <h3>Computadores odeiam calor</h3>
+        <p>
+            Um data center pode usar mais água para resfriamento do que uma pequena cidade.
+        </p>
+    </article>
+
+</section>
+
+
+<section>
+
+    <h2>Tabela Totalmente Necessária</h2>
+
+    <table class="table" style="width: 50%;">
+        <tr>
+            <th>Curiosidade</th>
+            <th>Nível de Inutilidade</th>
+        </tr>
+        <tr>
+            <td>Spam vem de presunto</td>
+            <td>Alto</td>
+        </tr>
+        <tr>
+            <td>Bluetooth é viking</td>
+            <td>Médio</td>
+        </tr>
+        <tr>
+            <td>Senha mais usada é 123456</td>
+            <td>Crítico</td>
+        </tr>
+    </table>
+
+</section>
+
+<header>
+    <h1>Coisas Que Seus Professores Não Contaram Sobre Computação</h1>
+    <p>Fatos obscuros, bugs absurdos e Easter eggs históricos.</p>
+</header>
+
+<nav class="navbar" style="background-color: #e3f2fd; justify-content: center;" data-bs-theme="light">
+    
+        <a class="btn btn-outline-primary" style="margin: 10px;" href="#easter-eggs">Easter Eggs</a>
+        <a class="btn btn-outline-primary" style="margin: 10px;" href="#bugs-absurdos">Bugs Absurdos</a>
+        <a class="btn btn-outline-primary" style="margin: 10px;" href="#comandos-secretos">Comandos Estranhos</a>
+        <a class="btn btn-outline-primary" style="margin: 10px;" href="#formulario-secreto">Envie Algo Suspeito</a>
+    
+</nav>
+
+
+<section id="easter-eggs">
+
+    <h2>Easter Eggs Reais e Oficiais</h2>
+
+    <article>
+        <h3>O Excel 97 tinha um simulador de voo escondido</h3>
+        <p>
+            O Microsoft Excel 97 escondia um jogo 3D estilo simulador de voo 
+            dentro da planilha.
+        </p>
+        <details>
+            <summary>Como ativava?</summary>
+            <p>Era preciso selecionar células específicas e usar combinações absurdas de teclado.</p>
+        </details>
+    </article>
+
+    <article>
+        <h3>O Google tem um T-Rex escondido</h3>
+        <p>
+            Quando você fica sem internet no Chrome, aparece um dinossauro.
+            Se apertar espaço, começa um jogo infinito.
+        </p>
+    </article>
+
+    <article>
+        <h3>O Windows 95 tinha créditos escondidos</h3>
+        <p>
+            Desenvolvedores colocaram seus nomes escondidos dentro do sistema.
+        </p>
+    </article>
+
+    <article>
+        <h3>O GitHub já teve um unicórnio voador</h3>
+        <p>
+            Em versões antigas, existia um modo visual alternativo escondido.
+        </p>
+    </article>
+
+</section>
+
+
+
+<section id="bugs-absurdos">
+
+    <h2>Bugs Absurdos da História</h2>
+
+    <article>
+        <h3>O bug que destruiu um foguete em 37 segundos</h3>
+        <p>
+            Em 1996, o foguete Ariane 5 explodiu por causa de uma conversão de número
+            de 64 bits para 16 bits.
+        </p>
+        <blockquote>
+            Custo do erro: aproximadamente 370 milhões de dólares.
+        </blockquote>
+    </article>
+
+    <article>
+        <h3>O Y2K (Bug do Milênio)</h3>
+        <p>
+            Sistemas antigos usavam apenas dois dígitos para o ano.
+            Em 2000, poderiam interpretar "00" como 1900.
+        </p>
+        <p>
+            O mundo gastou bilhões se preparando... e quase nada aconteceu.
+        </p>
+    </article>
+
+    <article>
+        <h3>O bug do Pentium</h3>
+        <p>
+            Um erro microscópico na divisão de números em processadores Intel
+            causava resultados errados em cálculos específicos.
+        </p>
+    </article>
+
+    <article>
+        <h3>O erro que duplicou dinheiro</h3>
+        <p>
+            Em 2012, um bug em um banco permitiu que clientes sacassem valores inexistentes.
+        </p>
+    </article>
+
+</section>
+
+
+
+<section id="comandos-secretos">
+
+    <h2>Comandos Estranhos e Inúteis</h2>
+
+    <article>
+        <h3>Konami Code</h3>
+        <p>
+            ↑ ↑ ↓ ↓ ← → ← → B A
+        </p>
+        <p>
+            Usado em dezenas de jogos e até em sites modernos.
+        </p>
+    </article>
+
+    <article>
+        <h3>sudo make me a sandwich</h3>
+        <pre>
+$ sudo make me a sandwich
+Okay.
+        </pre>
+        <p>Alguns sistemas Linux realmente respondem a isso.</p>
+    </article>
+
+    <article>
+        <h3>O comando que trava o Windows</h3>
+        <pre>
+CON CON
+        </pre>
+        <p>
+            No Windows antigo, criar uma pasta chamada CON era impossível.
+        </p>
+    </article>
+
+    <article>
+        <h3>A senha mais comum do planeta</h3>
+        <code>123456</code>
+        <p>
+            Continua sendo campeã mundial.
+        </p>
+    </article>
+
+</section>
+
+
+
+<section>
+
+    <h2>Tabela do Caos Digital</h2>
+
+    <table class="table" style="width: 50%;">
+        <tr>
+            <th>Evento</th>
+            <th>Nível de Caos</th>
+            <th>Custo Aproximado</th>
+        </tr>
+        <tr>
+            <td>Ariane 5</td>
+            <td>Explosivo</td>
+            <td>370 milhões USD</td>
+        </tr>
+        <tr>
+            <td>Bug do Pentium</td>
+            <td>Matemático</td>
+            <td>475 milhões USD</td>
+        </tr>
+        <tr>
+            <td>Y2K</td>
+            <td>Psicológico</td>
+            <td>Bilhões USD</td>
+        </tr>
+    </table>
+
+</section>
+
+
+<section id="form">
+
+    <h2>Envie um Fato Inútil</h2>
+
+    <form>
+        <fieldset>
+            <legend>Cadastro de Inutilidades</legend>
+
+            <label>Nome:</label>
+            <input type="text" name="nome">
+
+            <label>Fato Inútil:</label>
+            <input type="text" name="fato">
+
+            <label>Grau de inutilidade (0-10):</label>
+            <input type="number" name="grau" min="0" max="10">
+
+            <input type="submit" value="Enviar inutilidade">
+        </fieldset>
+    </form>
+    
+</section>
+ <section id="formulario">
+            <h2>Envie sua Curiosidade</h2>
+
+            <form>
+                <fieldset>
+                    <legend>Informações</legend>
+
+                    <label>Nome:</label>
+                    <input type="text" name="nome">
+
+                    <label>Email:</label>
+                    <input type="email" name="email">
+
+                    <label>Categoria:</label>
+                    <select name="categoria">
+                        <option>Pioneiros</option>
+                        <option>Bugs</option>
+                        <option>Internet</option>
+                        <option>Linguagens</option>
+                    </select>
+
+                    <label>Data do fato:</label>
+                    <input type="date" name="data">
+
+                    <label>Sua curiosidade:</label>
+                    <textarea name="curiosidade"></textarea>
+
+                    <input type="submit" value="Enviar">
+                </fieldset>
+            </form>
+        </section>
+
+    
+<section id="formulario-secreto">
+
+    <h2>Envie um Bug ou Easter Egg</h2>
+
+    <form>
+        <fieldset>
+            <legend>Cadastro Suspeito</legend>
+
+            <label>Seu nome:</label>
+            <input type="text" name="nome">
+
+            <label>Tipo:</label>
+            <select name="tipo">
+                <option>Bug</option>
+                <option>Easter Egg</option>
+                <option>Comando estranho</option>
+            </select>
+
+            <label>Descrição:</label>
+            <textarea name="descricao"></textarea>
+
+            <label>Grau de estranheza (1-10):</label>
+            <input type="number" min="1" max="10">
+
+            <input type="submit" value="Enviar para os arquivos secretos">
+        </fieldset>
+    </form>
+
+</section>
+
+
+</main>
+</body>
+<footer>
+    <p>© 2026 Instituto Internacional de Informações Desnecessárias</p>
+    <address>Email: inutilidades@caosdigital.com</address>
+      <p>&copy; 2026 Arquivo Confuso da Computação</p>
+        <address>
+            Contato: contato@computacao.com
+        </address>
+         <p>© 2026 Arquivo Ultra-Secreto da Computação</p>
+    <address>contato@ultrasecreto.dev</address>
+</footer>
+
+</div>
+
+</body>
+</html>
