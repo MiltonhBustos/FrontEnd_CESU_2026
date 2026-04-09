@@ -1,59 +1,330 @@
 <!DOCTYPE html>
-<html>
 <html lang="pt-BR">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="widht=device-widht, initial-scale=1.0">
-	<title> ATIVIDADES </title>
-	<style>
-		header {
-		        text-align: center;
-			background-color: DarkGray;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atividades - Milton Bustos</title>
+
+<style>
+	#stars, #clouds {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	#stars {
+    	background: transparent;
+    	z-index: -2;
+	}
+
+	.star {
+		position: absolute;
+		width: 2px;
+		height: 2px;
+		background: white;
+		opacity: 0.8;
+		animation: piscar 2s infinite alternate;
+	}
+
+	@keyframes piscar {
+		from { opacity: 0.2; }
+		to { opacity: 1; }
+	}
+
+	
+	#clouds {
+		z-index: -1;
+	}
+
+	.cloud {
+		position: absolute;
+		background: rgba(255, 255, 255, 0.08);
+		border-radius: 50%;
+		filter: blur(20px);
+		animation: moverNuvem linear infinite;
+	}
+
+	@keyframes moverNuvem {
+		from {
+			transform: translateX(-200px);
 		}
-		footer {
-		        text-align: center;
-			background-color: DarkGray;
+		to {
+			transform: translateX(110vw);
 		}
-	 
-	</style>
-	<header>
-		<h1> As atividades durante o semestre!</h1>
-		<p> Aluno Milton Bustos </p>
-	</header>
+	}
+	
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #0f172a;
+        color: white;
+    }
+
+    .header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, rgba(30,41,59,0.9), transparent);
+    position: relative;
+	}
 
 
+	.header::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 400px;
+		height: 200px;
+		background: radial-gradient(circle, rgba(34,197,94,0.3), transparent);
+		transform: translate(-50%, -50%);
+		filter: blur(60px);
+		z-index: -1;
+	}
+
+	.header h1 {
+		font-size: 3.5em;
+		letter-spacing: 2px;
+	}
+
+	.header h1 span {
+		color: #22c55e;
+	}
+
+	.header p {
+		margin-top: 15px;
+		opacity: 0.7;
+		font-size: 1.1em;
+	}
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        background: #1e293b;
+        border-radius: 15px;
+        padding: 25px;
+        transition: 0.3s;
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        background: #334155;
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 0.9em;
+        opacity: 0.7;
+    }
+
+    .card a {
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+        color: white;
+        background: #22c55e;
+        padding: 8px 15px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .card a:hover {
+        background: #16a34a;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        opacity: 0.6;
+    }
+
+	#aurora {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		background: linear-gradient(
+			120deg,
+			rgba(0, 255, 150, 0.15),
+			rgba(0, 200, 255, 0.15),
+			rgba(140, 0, 255, 0.15)
+		);
+
+		filter: blur(80px);
+		z-index: -3;
+
+		animation: auroraMove 15s ease-in-out infinite alternate;
+	}
+
+	#aurora::before {
+		content: "";
+		position: absolute;
+		width: 150%;
+		height: 150%;
+
+		background: linear-gradient(
+			60deg,
+			rgba(0,255,200,0.2),
+			rgba(0,150,255,0.2),
+			rgba(180,0,255,0.2)
+		);
+
+		animation: auroraWave 20s linear infinite;
+	}
+
+	@keyframes auroraMove {
+		0% {
+			transform: translate(-10%, -10%) scale(1);
+		}
+		100% {
+			transform: translate(10%, 10%) scale(1.2);
+		}
+	}
+
+	@keyframes auroraWave {
+		0% {
+			transform: rotate(0deg) translateX(0);
+		}
+		100% {
+			transform: rotate(360deg) translateX(50px);
+		}
+	}
+
+	#aurora { z-index: -3; }
+	#stars  { z-index: -2; }
+	#clouds { z-index: -1; }
+
+</style>
 </head>
 
 <body>
+<div id="stars"></div>
+<div id="clouds"></div>
+<div id="aurora"></div>
 
-	<nav>
-		<ul>
-			<li><a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE 1/atividade 18 02 front.html">ATIVIDADE 1</a>
-			</li>
-			<li><a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE 2/socorro/desisto_da_minha_vida.html">ATIVIDADE 2</a>
-			</li>
-			<li><a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE 3/atividade.html">ATIVIDADE 3</a>
-			</li>
-			<li><a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE%204/atividade4.html">ATIVIDADE 4</a>
-			</li>
-			<li><a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE%205/atividade5.html">ATIVIDADE 5</a>
-			</li>
-			<li><a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE%206/teste%20das%20imagens.html">ATIVIDADE 6</a>
-			</li>
-		</ul>
-	</nav>
+<header class="header">
+    <h1>Disciplina <span>Front-End</span></h1>
+    <p>Milton Bustos • Atividades em sala</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+
+        <div class="card">
+            <h3>Atividade 1</h3>
+            <p>Primeira página web.</p>
+            <a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE 1/atividade 18 02 front.html">Ver projeto</a>
+        </div>
+
+        <div class="card">
+            <h3>Atividade 2</h3>
+            <p>Já melhorou um pouco.</p>
+            <a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE 2/socorro/desisto_da_minha_vida.html">Ver projeto</a>
+        </div>
+
+        <div class="card">
+            <h3>Atividade 3</h3>
+            <p>Evolução no desenvolvimento web.</p>
+            <a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE 3/atividade.html">Ver projeto</a>
+        </div>
+
+        <div class="card">
+            <h3>Atividade 4</h3>
+            <p>Odeio bootstrap.</p>
+            <a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE%204/atividade4.html">Ver projeto</a>
+        </div>
+
+        <div class="card">
+            <h3>Atividade 5</h3>
+            <p>Odeio bootstrap(2.0)</p>
+            <a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE%205/atividade5.html">Ver projeto</a>
+        </div>
+
+        <div class="card">
+            <h3>Atividade 6</h3>
+            <p>Esse aqui ficou top!</p>
+            <a href="https://miltonhbustos.github.io/FrontEnd_CESU_2026/ATIVIDADE%206/teste%20das%20imagens.html">Ver projeto</a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>Feito a custo da minha sanidade mental 💀</p>
+</footer>
+
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    function mostrarCards() {
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            }, index * 150);
+        });
+    }
+
+    window.addEventListener("load", mostrarCards);
+
+
+	const starsContainer = document.getElementById("stars");
+
+	for (let i = 0; i < 100; i++) {
+		const star = document.createElement("div");
+		star.className = "star";
+
+		star.style.top = Math.random() * 100 + "vh";
+		star.style.left = Math.random() * 100 + "vw";
+		star.style.animationDuration = (Math.random() * 2 + 1) + "s";
+
+		starsContainer.appendChild(star);
+	}
+
+
+	const cloudsContainer = document.getElementById("clouds");
+
+	for (let i = 0; i < 6; i++) {
+		const cloud = document.createElement("div");
+		cloud.className = "cloud";
+
+		let size = Math.random() * 200 + 150;
+
+		cloud.style.width = size + "px";
+		cloud.style.height = size * 0.6 + "px";
+		cloud.style.top = Math.random() * 80 + "vh";
+		cloud.style.animationDuration = (Math.random() * 30 + 30) + "s";
+
+		cloudsContainer.appendChild(cloud);
+	}
 	
-	<footer>
-		<h4> Feito a custo da minha sanidade mental</h4>
-		
-	</footer>
-	
+
+</script>
+
 </body>
-
 </html>
-
-
-
-
-
-
