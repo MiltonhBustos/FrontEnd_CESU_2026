@@ -1,0 +1,62 @@
+body{
+    background: #649ea7;
+}
+
+h1{
+    color: white;
+}
+
+nav{
+    background-color: #8fbfb9;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+a:hover { color: #ff0000; }
+ 
+#grupoA{
+    background-color: #e0f3b2;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.25); 
+    border-style:solid;
+    border-color:#8fbfb9
+    
+}   
+
+#grupoB{
+    background-color: #eefaa8;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
+    border-style:solid;
+    border-color:#8fbfb9
+}  
+
+#grupoC{
+    background-color: #e0f3b2;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.25); 
+    border-style:solid;
+    border-color:#8fbfb9
+} 
+
+#proximoBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8fbfb9;
+    color: white;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+#proximoBtn:hover {
+    background-color: #649ea7;
+}

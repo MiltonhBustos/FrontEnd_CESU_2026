@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refacção 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>Grupos e fatos</h1>
+        <ul style="list-style-type: none; display: flex; gap: 20px;">
+            <li><a href="#grupoA">Grupo A</a></li>
+            <li><a href="#grupoB">Grupo B</a></li>
+            <li><a href="#grupoC">Grupo C</a></li>
+        </ul>
+    </nav>
+
+    <br>
+
+    <div id="grupoA">
+        <h2>🅰️ Grupo A</h2>
+        <h4>Seleções</h4>
+        <ul>
+            <li>México</li>
+            <li>África do Sul</li>
+            <li>Coreia do Sul</li>
+            <li>República Tcheca</li>
+        </ul>
+        <details>
+            <summary><b>Fatos</b></summary>
+            O jogo de abertura será México x África do Sul.
+            Confrontos entre Coreia do Sul e seleções europeias já ocorreram em várias Copas,
+            com histórico equilibrado.
+        </details>
+    </div>
+
+    <br>
+
+    <div id="grupoB">
+        <h2>🅱️ Grupo B</h2>
+        <h4>Seleções</h4>
+        <ul>
+            <li>Canadá</li>
+            <li>Suíça</li>
+            <li>Catar</li>
+            <li>Vaga Europeia (Bósnia)</li>
+        </ul>
+        <details>
+            <summary><b>Fatos</b></summary>
+            O Canadá joga em casa, fator importante de desempenho.
+            Catar e Suíça já se enfrentaram recentemente em amistosos internacionais.
+        </details>
+    </div>
+
+    <br>
+
+    <div id="grupoC">
+        <h2>🅲 Grupo C</h2>
+        <h4>Seleções</h4>
+        <ul>
+            <li>Brasil</li>
+            <li>Marrocos</li>
+            <li>Haiti</li>
+            <li>Escócia</li>
+        </ul>
+        <details>
+            <summary><b>Fatos</b></summary>
+            Brasil, Marrocos e Escócia já dividiram grupo em 1998.
+            Brasil nunca perdeu para a Escócia em Copas.
+        </details>
+    </div>
+
+    <br>
+
+    <button id="proximoBtn" onclick="trocarConteudo()">Próximo</button>
+
+    <script>
+        let alternando = false;
+
+        function trocarConteudo() {
+
+            if (!alternando) {
+                
+                document.querySelector("#grupoA h2").innerText = "Grupo 🅳";
+                document.querySelector("#grupoA ul").innerHTML = `
+                    <li>Estados Unidos</li>
+                    <li>Paraguai</li>
+                    <li>Austrália</li>
+                    <li>Turquia</li>
+                `;
+                document.querySelector("#grupoA details").innerHTML = `
+                    <summary><b>Fatos</b></summary>
+                    Os EUA jogam em casa, vantagem histórica em Copas. Austrália enfrenta frequentemente seleções sul-americanas em torneios.
+                `;
+
+                document.querySelector("#grupoB h2").innerText = "Grupo 🅴";
+                document.querySelector("#grupoB ul").innerHTML = `
+                    <li>Alemanha</li>
+                    <li>Equador</li>
+                    <li>Costa do Marfin</li>
+                    <li>Curaçao</li>
+                `;
+                document.querySelector("#grupoB details").innerHTML = `
+                    <summary><b>Fatos</b></summary>
+                    Alemanha costuma dominar fases de grupos. Equador e Costa do Marfim têm estilos físicos semelhantes.
+                `;
+
+                document.querySelector("#grupoC h2").innerText = "Grupo 🅵";
+                document.querySelector("#grupoC ul").innerHTML = `
+                    <li>Holanda</li>
+                    <li>Japão</li>
+                    <li>Tunísia</li>
+                    <li>Suécia</li>
+                `;
+                document.querySelector("#grupoC details").innerHTML = `
+                    <summary><b>Fatos</b></summary>
+                    Brasil, Marrocos e Escócia já dividiram grupo em 1998. Brasil nunca perdeu para a Escócia em Copas.
+                `;
+
+                alternando = true;
+
+            } else {
+                
+                location.reload();
+            }
+        }
+    </script>
+
+</body>
+</html>
