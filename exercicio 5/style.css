@@ -1,0 +1,27 @@
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f0f0f0;
+    font-family:Arial;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    width:400px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+li{
+    margin-top:10px;
+    border-bottom:1px solid #ccc;
+    padding:10px;
+}
+
+.riscado{
+    text-decoration:line-through;
+}
