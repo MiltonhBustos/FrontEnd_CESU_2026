@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title> Comandos básicos em C </title>
+	
+	<style>
+		header {
+		        text-align: center;
+			background-color: DarkGray;
+		}
+		nav {
+			text-align: center;
+		}
+		footer {
+			text-align: center;
+			background-color: DarkGray;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1> Conhecimento básico em C</h1>
+		<p> Conhecimentos básicos em C, operadores e laços de repetição. </p>
+	</header>
+	
+	<nav>
+		<a href="#operadores" target="_self">Operadores</a>
+		<a href="#lacos" target="_self">Laços</a>
+		<a href="#quiz" target="_self">Quiz</a>
+		<a href="#feedback" target="_self">Feedback</a>
+	</nav>
+	<h1>Conteúdos</h1>
+	<ul>
+		<li>
+			<h3> O que é Lógica de proramação? </h3>
+		</li>
+	</ul>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lógica de programação é a técnica de encadear pensamentos e estruturar instruções <i>algoritmos</i> de forma ordenada e clara para resolver um problema específico via computador </p>
+
+	<ul>
+		<li>
+			<h3> O que é um algoritmo? </h3>
+		</li>
+	</ul>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;É uma sequência finita e ordenada de passos lógicos e não ambíguos </p>
+	<ul>
+		<li>
+			<h3> O que é um programa? </h3>
+		</li>
+	</ul>
+
+	<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;É a codificação de um algoritmo em diferentes linguagens </p>
+<hr>	
+
+<div id="main">
+	<section id="operadores">
+	<h3> Operadores </h3>
+	<p> Operadores em C são símbolos especiais que instruem o compilador a realizar manipulações matemáticas, lógicas ou relacionais específicas em dados (variáveis ou constantes)</p>
+	<h1> Operadores Relacionais </h1>
+		<ul>
+			<li>
+				<table>
+				  
+					<th>Nome</th> <th> Operador </th>	
+				<tr>
+			  	  <td> Menor que </td> <td></td> <td/>       
+				  <td>x < y </td>
+				</tr>
+				<tr>
+			  	  <td> Maior que </td>    </td> <td></td> <td/>       
+				  <td> x > y 	 </td>
+				
+				</tr>
+				<tr>
+			  	  <td> Menor ou igual </td>          </td> <td></td> <td/> 
+				  <td>  x <= y  </td>
+				
+
+				<tr>
+			  	  <td> Maior ou igual </td>          </td> <td></td> <td/> 
+				  <td>  x >= y  </td>
+				</tr>
+
+				<tr>
+			  	  <td> Igual </td>          </td> <td></td> <td/> 
+				  <td>  x == y  </td>
+				</tr>	
+				
+				<tr>
+			  	  <td> Diferente </td>          </td> <td></td> <td/> 
+				  <td>   x != y  </td>
+				</tr>  	  
+			  	 
+				</tr>
+			</table>
+		</li>
+	</ul>
+
+	<h1> Operadores de Aritmética </h1>
+	<ul>
+		<li>
+			<table>
+				<tr>
+				  
+				<th>Nome</th> <th> Símbolo </th>	
+				<tr>
+			  	  <td> Adição </td> <td></td> <td/>       
+				  <td> +  </td>
+				</tr>
+				<tr>
+			  	  <td> Subtração  </td> <td></td> <td/>       
+				  <td>  - 	 </td>
+				
+				</tr>
+				<tr>
+			  	  <td> Multiplicação </td>          </td> <td></td> <td/> 
+				  <td>   *  </td>
+				
+
+				<tr>
+			  	  <td> Divisão </td>          </td> <td></td> <td/> 
+				  <td>   /  </td>
+				</tr>
+  
+			  	 
+				</tr>
+			</table>
+		</li>
+	</ul>
+
+	<h1> Operadores Lógicos </h1>
+	<ul>
+		<li>
+			<table>
+				<tr>
+				  
+				<th>Nome</th> <th> Símbolo </th>	
+				<tr>
+			  	  <td> AND/E </td> <td></td> <td/>       
+				  <td> &&  </td>
+				</tr>
+				<tr>
+			  	  <td> OR/OU  </td> <td></td> <td/>       
+				  <td>  ||	 </td>
+				
+				</tr>
+				<tr>
+			  	  <td> NOT/NÃO </td>          </td> <td></td> <td/> 
+				  <td>   !  </td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+	</section>
+<hr>
+	<section id="lacos">
+		<h1> Laços de Repetição </h1>
+		<p>Laços de repetição ou <i>loops</i> são estruturas de controle na programação que permitem executar um bloco de código várias vezes consecutivas, sem precisar reescrevê-lo</p>
+	
+
+		<h2> Laço FOR </h2>
+		<p>O laço <i>for</i> em C é uma estrutura de repetição usada quando você sabe quantas vezes quer repetir um bloco de código</p>
+		<a href="https://www.w3schools.com/c/c_for_loop.php">Exemplo de for </a>
+
+		<h2> Laço WHILE </h2>
+		<p>O laço <i>while</i> usado quando você não sabe exatamente quantas vezes o código vai repetir, mas sabe qual condição precisa ser verdadeira</p>
+		<a href="https://www.w3schools.com/c/c_while_loop.php">Exemplo de while </a>
+
+		<h2> Laço DO WHILE </h2>
+		<p>O <i>do while</i> é parecido com o while, mas tem uma diferença importante, ele executa o bloco pelo menos uma vez, mesmo que a condição seja falsa</p>
+		<a href="https://www.w3schools.com/c/c_do_while_loop.php">Exemplo de do while </a>
+
+	</section>
+	
+	<section id="quiz">
+			<form>
+			<fieldset>
+				<legend> 💭✍ Teste seu conhecimento </legend>
+
+				<label for="pergunta_1"> O operador de <mark> Maior</mark> é: ">"? </label><br>
+				<input type="radio" name="pergunta_1"> Verdadeiro
+				<input type="radio" name="pergunta_1"> Falso<br><br>				
+				
+				<label for="pergunta_2"> O operador de <mark>Diferente</mark> é: "!="? </label><br>
+				<input type="radio" name="pergunta_2"> Verdadeiro
+				<input type="radio" name="pergunta_2"> Falso<br><br>
+
+				<label for="pergunta_3"> O laço for é usado quando <mark>não</mark> sabemos o número de repetições: </label><br>
+				<input type="radio" name="pergunta_3"> Verdadeiro
+				<input type="radio" name="pergunta_3"> Falso<br><br>
+
+				<label for="pergunta_4"> O laço while é usado quando <mark>sabemos</mark> o número de repetições: </label><br>
+				<input type="radio" name="pergunta_4"> Verdadeiro
+				<input type="radio" name="pergunta_4"> Falso<br><br>
+				
+				<label for="op">Qual é o operador <mark>AND</mark> em linguagem C?</label>
+				<input list="op" name="Operadores">
+				<datalist id="op">
+					<option value="||">
+					<option value="&&">
+					<option value="!">
+				</datalist><br><br>
+
+				<label for="op">Qual é o operador <mark>OR</mark> em linguagem C?</label>
+				<input list="op" name="Operadores">
+				<datalist id="op">
+					<option value="||">
+					<option value="&&">
+					<option value="!">
+				</datalist><br><br>
+				
+				<input type="submit" value="enviar">
+			</fieldset>
+			</form>
+	</section>
+
+	<section id="feedback">
+		<h1>Feedback</h1>
+
+	<form>	
+		<fieldset>
+			<legend> Deixe sua opnião aqui: </legend>
+			<h4>Legenda</h4>
+
+				p>1- Muito ruim, 2- Ruim, 3- Normal, 4- Bom, 5- Muito bom</p>
+
+			<label for="pergunta_1"> O conteúdo no site parece relevante? </label><br>
+				<input type="radio" name="pergunta_1"> Sim
+				<input type="radio" name="pergunta_1"> Não<br><br>
+			
+				<label for="pergunta_2"> O conteúdo parece atual? </label><br>
+				<input type="radio" name="pergunta_2"> Sim
+				<input type="radio" name="pergunta_2"> Não<br><br>
+
+				<label for="pergunta_3"> A linguagem escrita no site é boa? </label><br>
+				<input type="radio" name="pergunta_3"> 1
+				<input type="radio" name="pergunta_3"> 2
+				<input type="radio" name="pergunta_3"> 3
+				<input type="radio" name="pergunta_3"> 4
+				<input type="radio" name="pergunta_3"> 5<br><br>
+
+				<label for="pergunta_4"> A estética do site é boa? </label><br>
+				<input type="radio" name="pergunta_4"> 1
+				<input type="radio" name="pergunta_4"> 2
+				<input type="radio" name="pergunta_4"> 3
+				<input type="radio" name="pergunta_4"> 4
+				<input type="radio" name="pergunta_4"> 5<br><br>
+				
+				<label for="pergunta_5"> Alguma outra descrição: </label><br>
+				<input type="text" id="pergunta_5" name="pergunta_5"><br><br>
+				
+				<input type="submit" value="enviar">
+		</fieldset>
+	</form>	
+	
+	</section>
+
+	<footer>
+		<h4> Feito com ❤ <h4>
+		<h6> Por Aluno Milton Bustos </h6>
+	</footer>
+
+</div>	
+</body>
+
+</html>
